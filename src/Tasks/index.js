@@ -1,5 +1,6 @@
 import "./style.css";
 
+
 const Tasks = (props) => (
    <ul className="tasks">
       {props.tasks.map(
@@ -17,5 +18,6 @@ const Tasks = (props) => (
          ))}
    </ul >
 );
+
 
 export default Tasks;

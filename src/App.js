@@ -13,6 +13,7 @@ const tasks = [
 
 const hideDoneTasks = false;
 
+
 function App() {
   return (
     <Container className="container">
@@ -27,8 +28,6 @@ function App() {
         body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
         extraHeaderContent={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
       />
-
-
     </Container>
   );
 }
