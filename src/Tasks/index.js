@@ -6,7 +6,10 @@ const Tasks = (props) => (
       {props.tasks.map(
          task => (
             < li key={task.id} className={`tasks__item ${task.done && props.hideDone ? "tasks__item--hidden" : " "}`} >
-               <button className="tasks__button tasks__button--toggleDone " >
+               <button
+                  className="tasks__button tasks__button--toggleDone "
+                  onClick={() => props.toggleTaskDone(task.id)}
+               >
                   {task.done ? "✔" : ""}
                </button>
                <span className={`tasks__content ${task.done ? " tasks__content--done" : ""}`} >
