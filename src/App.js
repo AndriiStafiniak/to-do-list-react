@@ -28,8 +28,15 @@ function App() {
         return { ...task, done: !task.done }
       }
       return task;
-    }))
-  }
+    }));
+  };
+
+  const setAllDone = () => {
+    setTasks(tasks => tasks.map(task => ({
+      ...task,
+      done: true,
+    })));
+  };
 
   return (
     <Container className="container" >
@@ -52,10 +59,11 @@ function App() {
           tasks={tasks}
           hideDone={hideDone}
           toggleHideDone={toggleHideDone}
+          setAllDone={setAllDone}
         />}
       />
     </Container>
   );
-}
+};
 
 export default App;
