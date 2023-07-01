@@ -8,13 +8,13 @@ const Form = ({ addNewTask }) => {
    const onFormSubmit = (event) => {
       event.preventDefault();
 
-      const dontAddEmptyIntup = newTaskContent.trim();
-      if (!dontAddEmptyIntup) {
+      const dontAddEmptyTask = newTaskContent.trim();
+      if (!dontAddEmptyTask) {
          return;
 
       };
 
-      addNewTask(dontAddEmptyIntup);
+      addNewTask(dontAddEmptyTask);
       setNewTaskContent("");
    };
 
