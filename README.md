@@ -6,7 +6,18 @@ https://andriistafiniak.github.io/to-do-list-react/
 ## How it work 
 ![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamU0d2M4cHJndjk1bGlmeXVlb3R4dHVmdXlmZmRocmd2cjJxNnpnZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pA96piWpNtSRYha5ND/giphy.gif)
 
+## Used Technologies
 
+- HTML
+- CSS
+- JavaScript
+- GIT
+- GRID
+- Flex
+- React
+- BEM Convention
+- Normalize
+- Markdown
 ## Discription
 A simple task list built in React – add tasks, remove tasks, and mark them as completed 🙂
 
