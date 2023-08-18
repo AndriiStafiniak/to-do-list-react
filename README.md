@@ -1,6 +1,10 @@
 # To-do List
 
+## Demo
+https://andriistafiniak.github.io/to-do-list-react/
+
 ## Discription
+A simple task list built in React – add tasks, remove tasks, and mark them as completed 🙂
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
