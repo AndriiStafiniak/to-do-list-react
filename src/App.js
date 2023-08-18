@@ -12,16 +12,17 @@ import { useState } from "react"
 function App() {
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState([
-    { id: 1, content: "Przejsc na react", done: true },
-    { id: 2, content: "Zjeac obiad", done: false }
+
   ]);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
+
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
   };
+
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
       if (task.id === id) {

@@ -11,7 +11,6 @@ const Form = ({ addNewTask }) => {
       const dontAddEmptyTask = newTaskContent.trim();
       if (!dontAddEmptyTask) {
          return;
-
       };
 
       addNewTask(dontAddEmptyTask);
@@ -25,7 +24,7 @@ const Form = ({ addNewTask }) => {
             value={newTaskContent}
             className="form__input"
             placeholder="Co jest do zrobienia? "
-            onChange={(event) => setNewTaskContent(event.target.value)}
+            onChange={({ target }) => setNewTaskContent(target.value)}
          />
          <button className="form__button">Dodaj zadanie</button>
       </form>
