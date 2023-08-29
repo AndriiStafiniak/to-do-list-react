@@ -31,17 +31,21 @@
 .tasks__button--toggleDone {
    background: hsl(124, 97%, 53%);
    color: white;
-   align-self: center;
    cursor: pointer;
+   text-align: center;
+   width: 35px;
+   height: 35px;
 }
 
 .tasks__button--toggleDone:hover {
    background: hsl(124, 97%, 73%);
-   ;
 }
 
 .tasks__button--remove {
    background: hsl(0, 100%, 50%);
+   text-align: center;
+   width: 35px;
+   height: 35px;
 }
 
 .buttons {
@@ -68,9 +72,9 @@
 
 .buttons__button:hover {
    color: hsl(180, 100%, 45%);
-
 }
 
 .buttons__button:disabled {
    color: #ccc;
+   cursor: auto;
 }
