@@ -1,10 +1,10 @@
-import "./style.css"
+import { ContainerStyled } from "./styled"
 
 
-const Container = ({ children }) => (
-   <div className="container">
+const Container = ({ children, className }) => (
+   <ContainerStyled className={className}>
       {children}
-   </div>
+   </ContainerStyled>
 );
 
 

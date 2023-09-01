@@ -7,7 +7,6 @@ import Container from "./Container";
 import { useEffect, useState } from "react"
 
 
-const getInitialTasks = () => JSON.parse(localStorage.getItem("tasks")) || [];
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -16,6 +15,8 @@ function App() {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
+
+  const getInitialTasks = () => JSON.parse(localStorage.getItem("tasks")) || [];
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);

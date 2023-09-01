@@ -1,34 +1,38 @@
-import "./style.css";
-import { useState } from "react";
+import { PrimaryButton, StyledForm, InputStyled } from "./styled";
+import { useState, useRef } from "react";
+
 
 
 const Form = ({ addNewTask }) => {
    const [newTaskContent, setNewTaskContent] = useState("");
+   const inputFocus = useRef(null)
 
    const onFormSubmit = (event) => {
       event.preventDefault();
 
-      const dontAddEmptyTask = newTaskContent.trim();
-      if (!dontAddEmptyTask) {
+      const trimmedTaskContent = newTaskContent.trim();
+      if (!trimmedTaskContent) {
          return;
       };
 
-      addNewTask(dontAddEmptyTask);
+      addNewTask(trimmedTaskContent);
       setNewTaskContent("");
+      inputFocus.current.focus();
    };
 
    return (
-      <form className="form" onSubmit={onFormSubmit}>
+      <StyledForm onSubmit={onFormSubmit}>
 
-         <input
+         <InputStyled
             autoFocus
+            ref={inputFocus}
             value={newTaskContent}
             className="form__input"
             placeholder="Co jest do zrobienia? "
             onChange={({ target }) => setNewTaskContent(target.value)}
          />
-         <button className="form__button">Dodaj zadanie</button>
-      </form>
+         <PrimaryButton>Dodaj zadanie</PrimaryButton>
+      </StyledForm>
    )
 };
 
