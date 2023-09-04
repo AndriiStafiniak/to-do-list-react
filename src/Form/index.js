@@ -1,8 +1,6 @@
 import { PrimaryButton, StyledForm, InputStyled } from "./styled";
 import { useState, useRef } from "react";
 
-
-
 const Form = ({ addNewTask }) => {
    const [newTaskContent, setNewTaskContent] = useState("");
    const inputFocus = useRef(null)
@@ -22,7 +20,6 @@ const Form = ({ addNewTask }) => {
 
    return (
       <StyledForm onSubmit={onFormSubmit}>
-
          <InputStyled
             autoFocus
             ref={inputFocus}
@@ -35,6 +32,5 @@ const Form = ({ addNewTask }) => {
       </StyledForm>
    )
 };
-
 
 export default Form; 

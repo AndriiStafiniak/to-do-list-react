@@ -14,15 +14,15 @@ export const PrimaryButton = styled.button`
 `;
 
 export const StyledForm = styled.form`
- display: grid;
-   grid-template-columns: 1fr auto;
-   gap: 20px;
-   @media (max-width: 767px) {
-   grid-template-columns: 1fr;
-   }
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      }
 `;
 
 export const InputStyled = styled.input`
-   padding: 10px;
-   border: 1px solid #ddd;
+      padding: 10px;
+      border: 1px solid #ddd;
 `;

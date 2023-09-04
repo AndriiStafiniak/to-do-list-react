@@ -1,24 +1,22 @@
 import { ButtonsWrapper, Button } from "./styled";
 
-
-const Buttons = (props) => (
+const Buttons = ({ tasks, toggleHideDone, hideDone, setAllDone }) => (
    <ButtonsWrapper>
-      {props.tasks.length > 0 && (
+      {tasks.length > 0 && (
          <>
             <Button
-               onClick={props.toggleHideDone}
+               onClick={toggleHideDone}
             >
-               {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
+               {hideDone ? "Pokaż" : "Ukryj"} ukończone
             </Button>
             <Button
-               onClick={props.setAllDone}
-               disabled={props.tasks.every(({ done }) => done)} >
+               onClick={setAllDone}
+               disabled={tasks.every(({ done }) => done)} >
                Ukończ wszystkie
             </Button>
          </>
       )}
    </ButtonsWrapper>
 );
-
 
 export default Buttons;

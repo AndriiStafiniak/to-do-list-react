@@ -1,18 +1,15 @@
-
 import { StyledSection, Title, Body, Header } from "./styled"
 
-
-const Section = (props) => (
+const Section = ({ title, extraHeaderContent, body }) => (
    <StyledSection>
       <Header>
-         <Title>{props.title}</Title>
-         {props.extraHeaderContent}
+         <Title>{title}</Title>
+         {extraHeaderContent}
       </Header>
       <Body>
-         {props.body}
+         {body}
       </Body>
    </StyledSection>
 );
-
 
 export default Section
