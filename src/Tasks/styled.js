@@ -30,7 +30,7 @@ export const Content = styled.span`
 `;
 
 export const TaskButton = styled.button`
-      color: white;
+      color: ${({ theme }) => theme.colors.white};
       border: none;
       width: 35px;
       height: 35px;
@@ -38,12 +38,12 @@ export const TaskButton = styled.button`
       cursor: pointer;
       text-align: center;
         ${({ toggleDone }) => toggleDone && css`
-            background: hsl(124, 97%, 53%);
-              &:hover{background: hsl(124, 97%, 85%)}
+            background: ${({ theme }) => theme.colors.green};
+              &:hover{background:${({ theme }) => theme.colors.hoverGreen}}
         `};
 
         ${({ remove }) => remove && css`
-            background: hsl(0, 100%, 50%);
-              &:hover{background: hsl(0, 100%, 80%)}  
+            background: ${({ theme }) => theme.colors.red};
+              &:hover{background: ${({ theme }) => theme.colors.hoverRed}}  
     `}
 `;

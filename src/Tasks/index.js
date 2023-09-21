@@ -18,7 +18,7 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                   {task.content}
                </Content >
                <TaskButton
-                  remove={true}
+                  remove
                   onClick={() => removeTask(task.id)}
                >
                   🗑️
