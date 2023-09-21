@@ -22,7 +22,6 @@ function App() {
     removeTask,
   } = useTasksManager();
 
-
   return (
     <Container>
       <Header title="Lista zadań" />

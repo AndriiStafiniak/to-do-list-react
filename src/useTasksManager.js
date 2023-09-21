@@ -2,15 +2,20 @@ import { useState, useEffect } from "react";
 
 const useTaskManager = () => {
    const [tasks, setTasks] = useState([]);
+   const [dataLoaded, setDataLoaded] = useState(false)
+
 
    useEffect(() => {
       const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
       setTasks(storedTasks);
+      setDataLoaded(true);
    }, []);
 
    useEffect(() => {
-      localStorage.setItem("tasks", JSON.stringify(tasks));
-   }, [tasks]);
+      if (dataLoaded) {
+         localStorage.setItem("tasks", JSON.stringify(tasks));
+      }
+   }, [tasks, dataLoaded]);
 
    const addNewTask = (content) => {
       setTasks((prevTasks) => [
