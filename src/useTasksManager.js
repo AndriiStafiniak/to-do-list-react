@@ -2,7 +2,13 @@ import { useState, useEffect } from "react";
 
 const useTaskManager = () => {
    const [tasks, setTasks] = useState([]);
-   const [dataLoaded, setDataLoaded] = useState(false)
+   const [dataLoaded, setDataLoaded] = useState(false);
+
+   const [hideDone, setHideDone] = useState(false);
+
+   const toggleHideDone = () => {
+      setHideDone((hideDone) => !hideDone);
+   };
 
 
    useEffect(() => {
@@ -58,6 +64,8 @@ const useTaskManager = () => {
       setAllDone,
       toggleTaskDone,
       removeTask,
+      toggleHideDone,
+      hideDone,
    };
 };
 

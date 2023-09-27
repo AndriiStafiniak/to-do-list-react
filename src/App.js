@@ -3,16 +3,10 @@ import Form from "./Form";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container";
-import { useState } from "react";
+import { Container } from "./Container/styled";
 import useTasksManager from "./useTasksManager";
 
 function App() {
-  const [hideDone, setHideDone] = useState(false);
-
-  const toggleHideDone = () => {
-    setHideDone((hideDone) => !hideDone);
-  };
 
   const {
     tasks,
@@ -20,6 +14,8 @@ function App() {
     setAllDone,
     toggleTaskDone,
     removeTask,
+    toggleHideDone,
+    hideDone,
   } = useTasksManager();
 
   return (
