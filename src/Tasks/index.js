@@ -1,4 +1,4 @@
-import { List, Item, Content, TaskButton } from "./styled"
+import { List, Item, Content, RemoveButton, ToggleDoneButton } from "./styled"
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
    <List>
@@ -8,21 +8,19 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                key={task.id}
                hidden={task.done && hideDone}
             >
-               <TaskButton
-                  toggleDone
+               <ToggleDoneButton
                   onClick={() => toggleTaskDone(task.id)}
                >
                   {task.done ? "✔" : ""}
-               </TaskButton>
+               </ToggleDoneButton>
                <Content done={task.done}>
                   {task.content}
                </Content >
-               <TaskButton
-                  remove
+               <RemoveButton
                   onClick={() => removeTask(task.id)}
                >
                   🗑️
-               </TaskButton>
+               </RemoveButton>
             </Item>
          ))}
    </List >

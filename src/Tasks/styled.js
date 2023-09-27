@@ -37,13 +37,16 @@ export const TaskButton = styled.button`
       transition: background 0.4s;
       cursor: pointer;
       text-align: center;
-        ${({ toggleDone }) => toggleDone && css`
-            background: ${({ theme }) => theme.colors.green};
-              &:hover{background:${({ theme }) => theme.colors.hoverGreen}}
-        `};
+        
+`;
+export const ToggleDoneButton = styled(TaskButton)`
 
-        ${({ remove }) => remove && css`
-            background: ${({ theme }) => theme.colors.red};
-              &:hover{background: ${({ theme }) => theme.colors.hoverRed}}  
-    `}
+      background: ${({ theme }) => theme.colors.green};
+          &:hover{background:${({ theme }) => theme.colors.hoverGreen}}
+        
+`;
+
+export const RemoveButton = styled(TaskButton)`
+      background: ${({ theme }) => theme.colors.red};
+           &:hover{background: ${({ theme }) => theme.colors.hoverRed}}  
 `;
