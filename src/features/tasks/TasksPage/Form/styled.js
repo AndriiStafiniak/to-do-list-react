@@ -22,7 +22,3 @@ export const StyledForm = styled.form`
       }
 `;
 
-export const InputStyled = styled.input`
-      padding: 10px;
-      border: 1px solid #ddd;
-`;
