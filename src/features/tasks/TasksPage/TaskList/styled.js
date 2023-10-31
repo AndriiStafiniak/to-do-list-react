@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components"
 
 export const List = styled.ul`
@@ -49,4 +50,13 @@ export const ToggleDoneButton = styled(TaskButton)`
 export const RemoveButton = styled(TaskButton)`
       background: ${({ theme }) => theme.colors.red};
            &:hover{background: ${({ theme }) => theme.colors.hoverRed}}  
+`;
+
+export const StyledLink = styled(NavLink)`
+      text-decoration: none;
+      color:${({ theme }) => theme.colors.teal};
+            &:hover{
+                  cursor: pointer;
+                  color: ${({ theme }) => theme.colors.hoverTeal};
+            }
 `;
