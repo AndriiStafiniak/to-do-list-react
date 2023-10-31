@@ -4,18 +4,21 @@
 https://andriistafiniak.github.io/to-do-list-react/
 
 ## How it work 
-![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamU0d2M4cHJndjk1bGlmeXVlb3R4dHVmdXlmZmRocmd2cjJxNnpnZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pA96piWpNtSRYha5ND/giphy.gif)
+![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3JnZW5nOG84bDdsanlnazl0MWFpdWV1anVlcndhdjBpNzB2emF5NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iU0shzekMIOZSFVBjA/giphy.gif)
 
 ## Used Technologies
-
 - HTML
-- CSS
 - JavaScript
-- GIT
-- GRID
-- Flex
-- React
-- BEM Convention
+- CSS Grid
+- CSS Flex
+- Media queries
+- [Create React App](https://github.com/facebook/create-react-app)
+- React Hooks: useState, useEffect, useRef and Custom Hooks (before Redux)
+- Styled Components
+- Redux
+- Redux Toolkit
+- Redux Saga
+- React Router.
 - Normalize
 - Markdown
 ## Discription
