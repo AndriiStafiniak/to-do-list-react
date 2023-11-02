@@ -15,7 +15,6 @@ const Navigatin = () => {
                   O autorze
                </StyledNavLink>
             </Item>
-
          </List>
       </nav>
    )

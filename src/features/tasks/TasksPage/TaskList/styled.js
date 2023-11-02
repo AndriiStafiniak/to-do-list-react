@@ -33,11 +33,12 @@ export const Content = styled.span`
 export const TaskButton = styled.button`
       color: ${({ theme }) => theme.colors.white};
       border: none;
-      width: 35px;
-      height: 35px;
+      width: 30px;
+      height: 30px;
       transition: background 0.4s;
       cursor: pointer;
       text-align: center;
+      padding: 0;
         
 `;
 export const ToggleDoneButton = styled(TaskButton)`

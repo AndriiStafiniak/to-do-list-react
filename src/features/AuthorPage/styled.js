@@ -1,0 +1,9 @@
+import styled from "styled-components";
+
+export const StyledLink = styled.a`
+   color: ${({ theme }) => theme.colors.teal};
+   text-decoration: none;
+   &:hover{
+      cursor: pointer;
+   }
+`;

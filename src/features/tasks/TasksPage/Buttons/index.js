@@ -18,7 +18,6 @@ const Buttons = () => {
 
    return (
       <ButtonsWrapper>
-
          {!areTaskEmpty && (
             <>
                <Button
@@ -35,6 +34,5 @@ const Buttons = () => {
          )}
       </ButtonsWrapper>
    );
-
-}
+};
 export default Buttons;

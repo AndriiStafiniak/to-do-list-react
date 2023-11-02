@@ -4,15 +4,11 @@ import { useQueryParameter } from "../queryParameters";
 import { StyledLink, List, Item, Content, RemoveButton, ToggleDoneButton } from "./styled"
 import { useSelector, useDispatch } from "react-redux";
 
-
-
 const TaskList = () => {
-
-   const query = useQueryParameter("szukaj")
-
+   const query = useQueryParameter("szukaj");
    const tasks = useSelector(state => selectTasksByQuery(state, query));
-   const hideDone = useSelector(selectHideDone);
 
+   const hideDone = useSelector(selectHideDone);
    const dispatch = useDispatch();
 
    return (
@@ -40,6 +36,6 @@ const TaskList = () => {
             ))}
       </List >
    );
-}
+};
 
 export default TaskList;
